@@ -1,9 +1,6 @@
-const express = require("express");
-const app = express();
+const app = require("./config/server");
 
-app.get("/", (req, res) => {
-  res.send({ bye: "budy" });
-});
-
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT);
+
+module.exports = app;
